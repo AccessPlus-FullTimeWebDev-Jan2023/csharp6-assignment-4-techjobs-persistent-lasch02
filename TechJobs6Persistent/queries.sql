@@ -4,9 +4,9 @@
 
 --Part 1: List the columns and their data types in the Jobs table. 
 -- Jobs Table: 
--- int Id
--- string Name
--- int EmployerId
+-- integer Id
+-- varchar Name
+-- integer EmployerId
 
 --Part 2: Write a query to list the names of the employers in St. Louis City.
 
