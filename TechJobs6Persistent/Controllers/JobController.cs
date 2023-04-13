@@ -31,7 +31,11 @@ namespace TechJobs6Persistent.Controllers
 
         public IActionResult Add()
         {
-            return View();
+            List<Employer> employers = context.Employers.ToList();
+
+            AddJobViewModel addJobViewModel = new AddJobViewModel(context.Employers.ToList());
+
+            return View(addJobViewModel);
         }
 
         [HttpPost]
