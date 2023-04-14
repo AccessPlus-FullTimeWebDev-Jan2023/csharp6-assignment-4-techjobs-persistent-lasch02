@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
+using TechJobs6Persistent.Models;
 
 namespace TechJobs6Persistent.ViewModels
 {
@@ -10,6 +12,7 @@ namespace TechJobs6Persistent.ViewModels
         public string? Name { get; set; }
 
         public int EmployerId { get; set; }
+
         public List<SelectListItem>? Employers { get; set; }
 
 
@@ -26,6 +29,8 @@ namespace TechJobs6Persistent.ViewModels
                 });
             }
         }
+
+        public AddJobViewModel() { }
 
     }
 }

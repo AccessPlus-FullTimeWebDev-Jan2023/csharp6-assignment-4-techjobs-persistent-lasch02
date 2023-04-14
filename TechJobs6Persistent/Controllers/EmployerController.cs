@@ -32,7 +32,7 @@ namespace TechJobs6Persistent.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            AddEmployerViewModel addEmployerViewModel = new AddEmployerViewModel(); //do I need parameter?
+            AddEmployerViewModel addEmployerViewModel = new AddEmployerViewModel(); //Linda
 
             return View(addEmployerViewModel);
         }
@@ -42,10 +42,12 @@ namespace TechJobs6Persistent.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Employer the Employer = context.Employers.Find(addEmpoyerViewModel.EmployerId);
                 Employer theEmployer = new Employer
                 {
                     Name = addEmployerViewModel.Name,
                     Location = addEmployerViewModel.Location
+                    //Employer = theEmployer
                 };
 
                 context.Employers.Add(theEmployer);
