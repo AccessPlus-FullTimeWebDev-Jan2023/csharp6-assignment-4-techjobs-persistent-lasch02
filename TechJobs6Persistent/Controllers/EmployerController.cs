@@ -14,6 +14,7 @@ namespace TechJobs6Persistent.Controllers
 {
     public class EmployerController : Controller
     { 
+        //giving our employer controller access to the database thru the db context
     private JobDbContext context;
 
         public EmployerController(JobDbContext dbContext)
@@ -32,6 +33,7 @@ namespace TechJobs6Persistent.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            //sets up Employer view model to determine and validate datat coming into the form
             AddEmployerViewModel addEmployerViewModel = new AddEmployerViewModel(); //Linda
 
             return View(addEmployerViewModel);
@@ -60,6 +62,7 @@ namespace TechJobs6Persistent.Controllers
 
         public IActionResult About(int id)
         {
+            //finding employer id and passing into the view
             Employer theEmployer = context.Employers.Find(id);
             //List<Employer> possibleEmployers = context.Employers.ToList();
 

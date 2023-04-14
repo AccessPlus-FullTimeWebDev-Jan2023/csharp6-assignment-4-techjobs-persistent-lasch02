@@ -32,6 +32,7 @@ namespace TechJobs6Persistent.Controllers
 
         public IActionResult Add()
         {
+           //I don't need this because I have the context.employers below that in the addJobViewModel constructor
             List<Employer> employers = context.Employers.ToList();
 
             AddJobViewModel addJobViewModel = new AddJobViewModel(context.Employers.ToList());
